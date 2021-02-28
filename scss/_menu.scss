@@ -1,0 +1,97 @@
+// ----Color------
+$menu-color:#06df6f;
+$menu-font-color:#000;
+$menu-btn-hover:#008d4b;
+//----------
+//--Flex--Position
+@mixin FlexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin Flexaround {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#Menu{
+    width: 100%;
+    height: 80px;
+    border-top: 2px solid $menu-color;
+    font-family: iranR;
+    font-weight: bolder;
+    
+
+    .container{
+        margin: 0 auto;
+        width: 95%;
+        height: 100%;
+        // border: 1px solid green;
+
+        .row{
+            width: 100%;
+            height: 100%;
+            display: flex;
+
+            #Logo{
+                // border: 1px solid orange;
+                margin-right: 10px;
+                width: 8%;
+                height: 100%;
+                @include FlexCenter();
+
+                &>img{
+                    width: 90%;
+                }
+            }
+            #main-menu{
+                min-width: 70%;
+                height: 100%;
+                 display: flex;
+                // border: 1px solid yellow;
+                overflow: hidden;
+                margin-right: 10px;
+                
+
+                &>li{
+                    @include FlexCenter();
+                    // border: 1px solid blue;
+                    padding: 0px 10px;
+                    margin: 0 5px;
+
+                    &>a{
+                        color: $menu-font-color;
+                        font-size: 1.1rem;
+                        font-weight: 900;
+
+                        &:hover{
+                            color: $menu-color;
+                        }
+                    }
+                }
+            }
+            #btn{
+                width:20%;
+                height: 100%;
+                // border: 1px solid red;
+                @include FlexCenter();
+
+                a{
+                    display:inline-block;
+                   padding: 10px 20px;
+                   border-radius: 50px;
+                    background-color: $menu-color;
+                    font-size: 1.2rem;
+                    font-weight: bolder;
+                    color: #fff;
+                    transition: 1s;
+
+                    &:hover{
+                        background-color: $menu-btn-hover;
+                    }
+                }
+            }
+        }
+    }
+    
+}

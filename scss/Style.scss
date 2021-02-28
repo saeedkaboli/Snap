@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style:none;
+    text-decoration: none;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    font-family: Iran;
+}
+header,div,a,span,footer,section,p,h1,h2,h3,h4,h5,h6{
+    display: none;
+}
+@media screen and (min-width:992px) and (max-width:1400px){
+    header,div,a,span,footer,section,p,h1,h2,h3,h4,h5,h6{
+        display:block;
+    }
+    @import"Font";
+    @import "menu";
+    @import "header";
+    @import "service";
+    @import "Taxi";
+}

@@ -1,0 +1,30 @@
+// ----Color------
+$service-color:#2e2e2e;
+$service-font-color:#000;
+$service-btn-hover:#008d4b;
+$service-mtn:#fff;
+$service-Line:#b9b9b9;
+$service-dec:#474747;
+$service-border:#e6e6e6;
+//----------
+//--Flex--Position
+@mixin FlexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin Flexaround {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+@mixin FlexCol {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+#Taxi{
+    border: 1px solid black;
+}

@@ -1,0 +1,129 @@
+// ----Color------
+$service-color:#2e2e2e;
+$service-font-color:#000;
+$service-btn-hover:#008d4b;
+$service-mtn:#fff;
+$service-Line:#b9b9b9;
+$service-dec:#474747;
+$service-border:#e6e6e6;
+//----------
+//--Flex--Position
+@mixin FlexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin Flexaround {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+@mixin FlexCol {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+#Services{
+    width: 100%;
+    height: 320%;
+    // border: 1px solid black;
+    
+
+    .container{
+        margin: 0 auto;
+        width: 95%;
+        height: 100%;
+        // border: 1px solid red;
+
+        .row{
+            width: 100%;
+            height: 100%;
+            text-align: center;
+
+            h1{
+                margin-top: 100px;
+                color: $service-color;
+                font-size: 2rem;
+            }
+            span{
+                width: 70%;
+                height: 1px;
+                background-color:$service-Line;
+                margin: 50px auto 0px auto;
+            }
+            h3{
+                width: 80%;
+                margin: 50px auto;
+                padding: 20px 0px;
+                line-height: 50px;
+                color: $service-dec;
+
+            }
+            #All-Box{
+                margin: 50px auto;
+                width: 85%;
+               min-height:auto;
+                // border: 1px solid red;
+                @include Flexaround();
+                flex-wrap:wrap;
+                font-family: iranR;
+
+                .Box{
+                    padding: 27px;
+                    width: 290px;
+                    height: 340px;
+                    border: solid 0.5px $service-border;
+                    margin-bottom: 50px;
+                    border-radius: 24px;
+                    box-shadow: 0 2px 12px 0 $service-Line;
+
+                    #InBox{
+                        width: 100%;
+                        height: 100%;
+                        // border: 1px solid green;
+
+                        li{
+                            width: 100%;
+                            height: auto;
+                            // border: 1px solid red;
+                        }
+                        .BoxImg{
+                            width:100%;
+                            height: auto;
+                          padding:5px 0px;
+
+                            img{
+                                width: 40%;
+                                height: auto;
+                               
+                            }
+                        
+                        }
+                        .BoxTitle{
+                            // font-family: iranR;
+                            text-align: center;
+                            padding: 5px 0px;
+                            font-size: 1rem;
+                            font-weight:900;
+                        }
+                        .BoxLink{
+                            text-align: right;
+                            // font-family: iranR;
+                            font-size: 0.9rem;
+                        }
+                        .BoxDic{
+                            width: 100%;
+                            min-height: auto;
+                            text-align: right;
+                            font-size: 0.9rem;
+                            
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}
