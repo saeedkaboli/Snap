@@ -1,11 +1,12 @@
 // ----Color------
-$service-color:#2e2e2e;
-$service-font-color:#000;
-$service-btn-hover:#008d4b;
-$service-mtn:#fff;
-$service-Line:#b9b9b9;
-$service-dec:#474747;
-$service-border:#e6e6e6;
+$Taxi-color:#2e2e2e;
+$Taxi-font-color:#00ef74;
+$Taxi-btn-hover:#008d4b;
+$Taxi-mtn:#fff;
+$Taxi-Line:#b9b9b9;
+$Taxi-dec:#474747;
+$Taxi-border:#e6e6e6;
+$Taxi-Bg-color:#151f33;
 //----------
 //--Flex--Position
 @mixin FlexCenter {
@@ -26,5 +27,38 @@ $service-border:#e6e6e6;
     
 }
 #Taxi{
-    border: 1px solid black;
+    background: $Taxi-Bg-color;
+    width: 100%;
+    padding: 60px 0px;
+
+    .container{
+        margin: 0 auto;
+        width: 95%;
+        height: 100%;
+
+        .row{
+            width: 100%;
+            height: 100%;
+
+            h1{
+                color: $Taxi-font-color;
+                font-family: iranR;
+                font-size: 2.5rem;
+                direction: rtl;
+               text-align: right;
+            }
+            h5{
+                font-family: iranB;
+                font-size: 1.2rem;
+                color: $Taxi-mtn;
+                margin-top: 25px;
+              margin-bottom: 30px;
+               direction: rtl;
+               text-align: justify;
+               line-height: 35px;
+               
+            }
+        }
+
+    }
 }
