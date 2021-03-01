@@ -45,24 +45,26 @@ $menu-btn-hover:#008d4b;
                 }
             }
             #main-menu{
-                min-width: 70%;
-                height: 100%;
+                width:70%;
+                height:100%;
                  display: flex;
                 // border: 1px solid yellow;
                 overflow: hidden;
-                margin-right: 10px;
+                margin-right: 15px;
                 
 
                 &>li{
                     @include FlexCenter();
                     // border: 1px solid blue;
-                    padding: 0px 10px;
-                    margin: 0 5px;
+                    padding: 0px 7px;
+                    margin: 0 2px;
 
                     &>a{
                         color: $menu-font-color;
-                        font-size: 1.1rem;
+                        font-size: 1rem;
                         font-weight: 900;
+                        // border: 1px solid black;
+                        // padding: 20px;
 
                         &:hover{
                             color: $menu-color;
@@ -74,7 +76,9 @@ $menu-btn-hover:#008d4b;
                 width:20%;
                 height: 100%;
                 // border: 1px solid red;
+                direction: ltr;
                 @include FlexCenter();
+              //  margin-right: 20%;
 
                 a{
                     display:inline-block;
