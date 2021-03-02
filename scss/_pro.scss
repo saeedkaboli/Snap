@@ -1,12 +1,15 @@
 // ----Color------
-$Taxi-color:#2e2e2e;
-$Taxi-font-color:#00ef74;
-$Taxi-btn-hover:#008d4b;
-$Taxi-mtn:#fff;
-$Taxi-Line:#b9b9b9;
-$Taxi-dec:#474747;
-$Taxi-border:#e6e6e6;
-$Taxi-Bg-color:#151f33;
+$pro-color:#2e2e2e;
+$pro-font-color:#00ef74;
+$pro-btn-hover:#008d4b;
+$pro-mtn:#fff;
+$pro-Line:#b9b9b9;
+$pro-dec:#474747;
+$pro-border:#e6e6e6;
+$pro-Bg-color:#dce4e8;
+$pro-color-mtn-heading:#00b36e;
+$pro-color-mtn-Dis:#4b4b4b;
+
 //----------
 //--Flex--Position
 @mixin FlexCenter {
@@ -26,8 +29,192 @@ $Taxi-Bg-color:#151f33;
     flex-direction: column;
     
 }
+@mixin FlexStart {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    
+}
+@mixin FlexEnd {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+    
+}
 #Praperty{
     width: 100%;
-    height:500px;
+    height:auto;
     border: 1px solid black;
+    background-color:$pro-Bg-color; 
+       
+
+    .container{
+        margin: 0 auto;
+        width: 90%;
+        height: 100%;
+        // border: 1px solid red;
+
+        .row{
+            width: 100%;
+            height: 100%;
+            padding: 0px 0px 70px 0px;
+            // border: 1px solid green;
+            @include FlexCol();
+
+            h1{
+                width: 100%;
+                height: auto;
+                font-family: iranR;
+                // border: 1px solid blue;
+                font-size: 2.5rem;
+                padding: 50px 0px 20px 0px;
+            }
+            #All-Btn{
+                width: 100%;
+                height:auto;
+                // border: 1px solid orange;
+                display: flex;
+
+                #R{
+                    width: 20%;
+                    height: 100%;
+                    // border: 1px solid red;
+
+
+                    a{
+                        width: 100%;
+                        height: 80px;
+                        border: 1px solid green;
+                        background-color: $pro-font-color;
+                        @include FlexCenter();
+                        color: $pro-mtn;
+                        cursor: pointer;
+                        font-size: 1.5rem;
+                        font-family: iranR;
+                      //   height: 55px;
+                          border: solid 1px #00ef74;
+                          border-radius: 0 3px 3px 0;
+                        padding: 15px 5px;
+                       margin: 15px 0;
+                        font-weight: 600;
+                        transition: 1s;
+                        box-shadow: 5px 5px 10px black;
+                        border: 1px solid #27ff68;
+
+                        &:hover{
+                            background-color: $pro-btn-hover;
+                        }
+                    
+                    }
+                    
+                }
+                #L{
+                    width: 80%;
+                    height: 100%;
+                   // border: 1px solid blue;
+               //     @include FlexStart();
+            
+
+                    .Comment{
+                        width: 100%;
+                        height: 620px;
+                        background-color: $pro-mtn;
+                        border-radius: 5px;
+                        box-shadow: -7px 7px 15px black;
+
+                        #Comment-ul{
+                            width: 100%;
+                            height:100%;
+                         //   border: 1px solid black;
+                            display: flex;
+
+                            .CommentImg{
+                                width: 25%;
+                                height: 100%;
+                                //border: 1px solid red;
+                                
+                                #CommentBoxImg{
+                                    width: 85%;
+                                    height: 200px;
+                                   // border: 1px solid green;
+                                    margin:68px 15px 0px 0px;
+                                    background-image: url(../Images/Service-Img/icons-sprite.png);
+                                    background-size:cover;
+                                    background-repeat: no-repeat;
+                                    background-position-y:20%;
+                                  
+                                }
+                                
+                            }
+                            .CommentMtn{
+                                width: 70%;
+                                height: 100%;
+                             //   border: 1px solid blue;
+                             //   @include FlexCol();
+                                #Comment-Ul-Mtn{
+                                       width: 100%;
+                                       height: 100%;
+                                 //      border: 1px solid red;
+                                      // @include FlexCol();
+                                   .Comment-Mtn-Heading{
+                              //         border: 1px solid black;
+
+                                       h1{
+                                           margin-right: 20px;
+                                           color: $pro-color-mtn-heading;
+                                       }
+                                       
+                                   }
+                                   .Comment-Mtn-Dic{
+                                      // border: 1px solid red;
+
+                                       p{
+                                           padding: 10px 15px;
+                                           font-weight: bolder;
+                                           color: $pro-color-mtn-Dis;
+                                           line-height: 35px;
+                                       }
+
+                                   }
+                                   .Comment-Mtn-Pro{
+                                     //  border: 1px solid orange;
+                                       margin-top: 40px;
+                                       
+
+                                       #list-pro{
+                                           width: 80%;
+                                           height: 100%;
+                                         //  border: 1px solid green;
+                                        //    @include FlexStart();
+                                        padding-right:50px;
+
+                                           li{
+                                            list-style:disc;
+                                            margin: 20px 0px;
+                                         //   padding-right: 50px;
+                                           }
+                                       }
+                                   }
+                                       
+                                }
+                             
+                                
+                            }
+                            .CommentCircles{
+                                width: 5%;
+                                height: 100%;
+                                border: 1px solid green;
+                            }
+                        }
+
+                    }
+                }
+    
+            }
+            
+
+        }
+    }
 }
