@@ -1,0 +1,136 @@
+// ----Color------
+$footer-font-color:#00ef74;
+$footer-color:#2e2e2e;
+$footer-btn-hover:#008d4b;
+$footer-mtn:#fff;
+$footer-Line:#b9b9b9;
+$footer-dec:#474747;
+$footer-border:#e6e6e6;
+$footer-Bg-color:#151f33;
+$footer-color-mtn-heading:#00b36e;
+$footer-color-mtn-Dis:#4b4b4b;
+
+//----------
+//--Flex--Position
+@mixin FlexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin Flexaround {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+@mixin FlexCol {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+@mixin FlexStart {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    
+}
+@mixin FlexEnd {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+    
+}
+#footer{
+    width: 100%;
+    height:auto;
+ //   border: 1px solid black;
+    background-color: $footer-Bg-color;
+
+    .container{
+        margin:0 auto;
+        width: 65%;
+        height: 100%;
+       // border: 1px solid green;
+
+        .row{
+            width: 100%;
+            height: 100%;
+            text-align: center;
+         //   border: 1px solid red;
+
+            #FooterParts{
+                width: 100%;
+                height: 100%;
+            //    border: 1px solid orange;
+                @include FlexStart();
+
+                .FooterMenuMain{
+                    width: 90%;
+                    height:auto;
+                  //  border: 1px solid red;
+                  padding-top: 20px;
+                    @include FlexCenter();
+
+                    #Menu-Footer{
+                        width: 100%;
+                        height: auto;
+                        @include Flexaround();
+                        font-family: iranR;
+                        color: $footer-mtn;
+                        li{
+                            padding: 10px 7px;
+                           // border: 1px solid blue;
+                          a{
+                              color: $footer-mtn;
+                              font-weight: bolder;
+
+                              &:hover{
+                                  color: $footer-color-mtn-heading;
+                              }
+                          }
+
+                         
+                        }
+                    }
+                }
+                .FooterCopy{
+                    width: 100%;
+                    height: auto;
+                    padding: 40px 0px;
+                 //   border: 1px solid green;
+
+                    p{
+                        font-family: iranR;
+                        font-size: 1.2rem;
+                        color: $footer-mtn;
+                        font-weight: 100;
+                        line-height: 30px;
+                    }
+
+                }
+                .Footerlaw{
+                    width: 100%;
+                    height: auto;
+                    padding: 50px 0px 0px 0px;
+                  //  border: 1px solid green;
+                    @include FlexCenter();
+                     
+                    a{
+                          width:140px;
+                          height: auto;
+                      //    border: 1px solid red;
+
+                          img{
+                              width: 100%;
+                              height: auto;
+                          }
+                    }
+                }
+
+            }
+        }
+    }
+}
