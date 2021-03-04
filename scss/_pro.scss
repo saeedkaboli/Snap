@@ -147,6 +147,7 @@ $pro-color-mtn-Dis:#4b4b4b;
                                     img{
                                         width: 100%;
                                         height: auto;
+                                        transition: 1s;
                                     }
                                   
                                 }
@@ -212,12 +213,13 @@ $pro-color-mtn-Dis:#4b4b4b;
                                 // border: 1px solid green;
                                 @include FlexCol();
 
-                                #Circle{
+                                #Circles{
                                     margin: 20px 0px;
                                     width: 10px;
                                     height: 10px;
                                     background-color: $pro-btn-hover;
                                     border-radius: 50%;
+                                    transition: 1s;
                                 }
 
 
